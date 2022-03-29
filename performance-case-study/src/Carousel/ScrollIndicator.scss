@@ -1,0 +1,25 @@
+$css_prefix: scroll-indicator;
+
+.#{$css_prefix} {
+    user-select: none;
+    span {
+        color: #DCDCDC;
+        height: 30px;
+        width: 7px;
+        font-size: 30;
+        font-weight: bold;
+    }
+    &.active {
+        cursor: pointer;
+        span {
+            transition: fill 0.4s;
+            color: red
+        }  
+    }
+    &.left {
+        padding-right: 5px
+    }
+    &.right {
+        padding-left: 5px
+    }   
+}
