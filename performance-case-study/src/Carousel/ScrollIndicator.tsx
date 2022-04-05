@@ -40,6 +40,7 @@ const ScrollIndicator: React.FC<IndicatorProps> = (props:IndicatorProps) => {
         container.addEventListener('scroll', throttledCheckActive);
         return () => {
             throttledCheckActive.cancel();
+            container.removeEventListener('scroll', throttledCheckActive);
         }
     }, []);
 

@@ -29,6 +29,7 @@ const Slider: React.FC<SliderProps> = (props:SliderProps) => {
         window.addEventListener('resize', debouncedCheckIndicators);
         return () => {
             debouncedCheckIndicators.cancel();
+            window.removeEventListener('resize', debouncedCheckIndicators)
         }
     }, [])
 
